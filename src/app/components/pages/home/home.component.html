@@ -1,0 +1,36 @@
+<div nz-row class="home-container">
+  <div nz-col nzSpan="16" class="home-content-left">
+    <div class="ranking-list">
+      <nz-list [nzDataSource]="rankingList" nzBordered [nzHeader]="'本期寝排名'" [nzRenderItem]="item">
+        <ng-template #item let-item>
+          <nz-list-item [nzContent]="item"></nz-list-item>
+        </ng-template>
+        <div class="loading-more">
+          <a class="loading-more-link" [routerLink]="'../ranking-list'">查看更多</a>
+        </div>
+      </nz-list>
+    </div>
+  </div>
+  <div nz-col nzSpan="8" class="home-content-right">
+    <div class="carousel">
+      <nz-carousel nzAutoPlay>
+        <div nz-carousel-content *ngFor="let index of carouselList">
+          <h3>{{ index }}</h3>
+        </div>
+      </nz-carousel>
+    </div>
+    <div class="information">
+      <nz-divider nzText="消息通知"></nz-divider>
+      <nz-list [nzDataSource]="informationList" nzBordered [nzRenderItem]="item" nzSize="small">
+        <ng-template #item let-item>
+          <nz-list-item [nzContent]="item" [routerLink]="'../information'"></nz-list-item>
+        </ng-template>
+        <div class="loading-more">
+          <a class="loading-more-link" [routerLink]="'../ranking-list'">查看更多</a>
+        </div>
+      </nz-list>
+
+    </div>
+
+  </div>
+</div>

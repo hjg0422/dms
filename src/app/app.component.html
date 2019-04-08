@@ -1,0 +1,31 @@
+<app-header [navList]="navList"></app-header>
+<nz-breadcrumb [nzAutoGenerate]="true">
+<!--   <nz-breadcrumb-item>
+    <a [routerLink]="['../../']">Home</a>
+  </nz-breadcrumb-item> -->
+</nz-breadcrumb>
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate" [nzTheme]="'light'"
+    style="min-height:80vh;">
+    <div class="logo"></div>
+    <ul nz-menu [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed" [nzTheme]="'light'">
+      <li nz-submenu *ngFor="let item of navList">
+        <span title *ngIf="item.path" [routerLink]="'../'+item.path"><i nz-icon [type]="item.icon"></i><span
+            class="nav-text">{{item.name}}</span></span>
+        <span title *ngIf="!item.path"><i nz-icon [type]="item.icon"></i><span
+            class="nav-text">{{item.name}}</span></span>
+        <ul *ngIf="item['children']">
+          <li nz-menu-item *ngFor="let i of item['children']" [routerLink]="'../'+i.path">
+            <span title><i nz-icon [type]="i.icon"></i><span class="nav-text">{{i.name}}</span></span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-content>
+      <router-outlet #routerOutlet="outlet"></router-outlet>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+<app-footer></app-footer>

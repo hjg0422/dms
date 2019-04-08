@@ -1,0 +1,14 @@
+<header>
+  <div class=" nav-logo">
+    <span class=" nav-logo-title">
+      宿舍管理系统
+    </span>
+  </div>
+  <nav>
+    <ul class=" nav-item nav-list" *ngIf="navList">
+      <li class="nav-list-item" [routerLink]="'../home'">主页</li>
+      <!-- <li class="nav-list-item" *ngFor="let item of navList" [routerLink]="'../'+item.path">{{item.name}}</li> -->
+      <li class="nav-list-item" [routerLink]="'../login'">登录</li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,20 @@
+.my-profile-list {
+  list-style: none;
+  width: 100%;
+  min-height: 15em;
+  border: 1px solid #f4f4f4;
+}
+
+.list-item {
+  display: block;
+  font-size: 16px;
+  border: 1px solid #f4f4f4;
+  border-top: 1px solid transparent;
+  min-width: 20em;
+  width: 80%;
+  margin: 0 auto;
+}
+.list-item>.title{
+    color: #108066;
+    font-weight: bold;
+}

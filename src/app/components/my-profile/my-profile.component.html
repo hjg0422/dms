@@ -1,0 +1,24 @@
+<div nz-row class="my-profile-container">
+  <div nz-col nzSpan="4"></div>
+  <div nz-col nzSpan="16" class="my-profile-content">
+    <div style="background: #ECECEC;padding:30px;">
+      <nz-card [nzBordered]="false" nzTitle="个人信息" [nzExtra]="edit">
+        <ul class="my-profile-list">
+          <li class="list-item"><span class="title">姓名:</span><span class="detail">马云</span></li>
+          <li class="list-item"><span class="title">性别:</span><span class="detail">男</span></li>
+          <li class="list-item"><span class="title">年龄:</span><span class="detail">18</span></li>
+          <li class="list-item"><span class="title">专业:</span><span class="detail">计算机科学与技术</span></li>
+          <li class="list-item"><span class="title">学部:</span><span class="detail">信息学部</span></li>
+          <li class="list-item"><span class="title">房间号:</span><span class="detail">666</span></li>
+          <li class="list-item"><span class="title">楼栋号:</span><span class="detail">4b</span></li>
+          <li class="list-item"><span class="title">入住时间:</span><span class="detail">2015/9/4</span></li>
+          <li class="list-item"><span class="title">入学时间:</span><span class="detail">2015/9/4</span></li>
+        </ul>
+      </nz-card>
+    </div>
+    <ng-template #edit>
+      <a><i nz-icon [type]="'edit'"></i> 编辑</a>
+    </ng-template>
+  </div>
+  <div nz-col nzSpan="4"></div>
+</div>
