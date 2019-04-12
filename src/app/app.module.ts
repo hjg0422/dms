@@ -17,6 +17,11 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { SessionStorage } from './FUNCTIONS/sessionStorage';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { EditMyProfileComponent } from './components/edit-my-profile/edit-my-profile.component';
+import { InfomationComponent } from './components/pages/home/infomation/infomation.component';
+import { RankingComponent } from './components/pages/home/ranking/ranking.component';
+import { InformationListComponent } from './components/pages/home/information-list/information-list.component';
+import { RankingListComponent } from './components/pages/home/ranking-list/ranking-list.component';
+import { TutsauComponent } from './components/home/tutsau/tutsau.component';
 
 registerLocaleData(en);
 
@@ -29,7 +34,12 @@ registerLocaleData(en);
     FooterComponent,
     HomeComponent,
     MyProfileComponent,
-    EditMyProfileComponent
+    EditMyProfileComponent,
+    InfomationComponent,
+    RankingComponent,
+    InformationListComponent,
+    RankingListComponent,
+    TutsauComponent
   ],
   imports: [
     BrowserModule,

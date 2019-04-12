@@ -2,23 +2,28 @@
   <div class="edit-content">
     <nz-card [nzBordered]="false" nzTitle="编辑个人信息">
       <nz-input-group nzAddOnBefore="姓名" class="edit-item">
-        <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" />
+        <input type="text" nz-input [(ngModel)]="username" />
       </nz-input-group>
       <nz-input-group nzAddOnBefore="性别" class="edit-item">
-        <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" />
+        <input type="text" nz-input [(ngModel)]="username" />
       </nz-input-group>
       <nz-input-group nzAddOnBefore="年龄" class="edit-item">
-        <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" />
+        <input type="text" nz-input [(ngModel)]="username" />
       </nz-input-group>
       <nz-input-group nzAddOnBefore="专业" class="edit-item">
-        <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" />
+        <nz-cascader style="vertical-align: bottom;" [nzExpandTrigger]="'hover'" [nzOptions]="professionalList"
+          [(ngModel)]="values" (ngModelChange)="onChanges($event)">
+        </nz-cascader>
       </nz-input-group>
-      <nz-input-group nzAddOnBefore="姓名" class="edit-item">
-        <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" />
+      <nz-input-group nzAddOnBefore="入住信息" class="edit-item">
+        <nz-cascader style="vertical-align: bottom;" [nzExpandTrigger]="'hover'" [nzOptions]="dormInfoList"
+          [(ngModel)]="values" (ngModelChange)="onChanges($event)">
+        </nz-cascader>
       </nz-input-group>
-      <nz-input-group nzAddOnBefore="姓名" class="edit-item">
-        <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" />
-      </nz-input-group>
+      <div class="edit-item">
+        <span class="time-title">入住时间</span>
+        <nz-date-picker style="padding: .2em;" [(ngModel)]="date" (ngModelChange)="onChanges($event)"></nz-date-picker>
+      </div>
     </nz-card>
   </div>
 </div>

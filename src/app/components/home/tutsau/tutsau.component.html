@@ -1,0 +1,26 @@
+<div class="tusau-container">
+  <div class="record">
+    <textarea rows="4" nz-input [(ngModel)]="inputValue" placeholder="请说点什么吧"></textarea>
+    <button nz-button nz-size="small">发表</button>
+  </div>
+  <nz-list [nzDataSource]="data" [nzItemLayout]="'vertical'" [nzRenderItem]="item" [nzPagination]="pagination"
+    nzLoadMore [nzSize]="small" [nzSplit]="true">
+    <ng-template #item let-item>
+      <nz-list-item [nzContent]="item.content" [nzActions]="[starAction, likeAction, msgAction]">
+        <ng-template #starAction><i nz-icon type="star-o" style="margin-right: 8px;"></i>
+          {{item.star}}</ng-template>
+        <ng-template #likeAction><i nz-icon type="like-o" style="margin-right: 8px;"></i> {{item.like}}</ng-template>
+        <ng-template #msgAction><i nz-icon type="message" style="margin-right: 8px;" (click)="actionComment(item)"></i>
+          {{item.commentNum}}
+        </ng-template>
+        <nz-list-item-meta [nzAvatar]="item.avatar" [nzTitle]="nzTitle" [nzDescription]="item.description">
+          <ng-template #nzTitle><a href="{{ item.href }}" target="_blank">{{ item.title }}</a></ng-template>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </ng-template>
+    <ng-template #pagination>
+      <!-- <nz-pagination [nzPageIndex]="1" [nzTotal]="50" (nzPageIndexChange)="loadData($event)"></nz-pagination> -->
+      <div style="text-align: center;">加载更多</div>
+    </ng-template>
+  </nz-list>
+</div>

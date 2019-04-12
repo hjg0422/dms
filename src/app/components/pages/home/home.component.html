@@ -23,10 +23,10 @@
       <nz-divider nzText="消息通知"></nz-divider>
       <nz-list [nzDataSource]="informationList" nzBordered [nzRenderItem]="item" nzSize="small">
         <ng-template #item let-item>
-          <nz-list-item [nzContent]="item" [routerLink]="'../information'"></nz-list-item>
+          <nz-list-item [nzContent]="item" [routerLink]="'../information/2'"></nz-list-item>
         </ng-template>
         <div class="loading-more">
-          <a class="loading-more-link" [routerLink]="'../ranking-list'">查看更多</a>
+          <a class="loading-more-link" [routerLink]="'../information-list'">查看更多</a>
         </div>
       </nz-list>
 
