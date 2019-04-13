@@ -22,6 +22,7 @@ import { RankingComponent } from './components/pages/home/ranking/ranking.compon
 import { InformationListComponent } from './components/pages/home/information-list/information-list.component';
 import { RankingListComponent } from './components/pages/home/ranking-list/ranking-list.component';
 import { TutsauComponent } from './components/home/tutsau/tutsau.component';
+import { TtusauComponent } from './components/pages/home/ttusau/ttusau.component';
 
 registerLocaleData(en);
 
@@ -39,7 +40,8 @@ registerLocaleData(en);
     RankingComponent,
     InformationListComponent,
     RankingListComponent,
-    TutsauComponent
+    TutsauComponent,
+    TtusauComponent
   ],
   imports: [
     BrowserModule,

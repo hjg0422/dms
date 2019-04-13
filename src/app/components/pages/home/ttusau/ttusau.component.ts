@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tutsau',
-  templateUrl: './tutsau.component.html',
-  styleUrls: ['./tutsau.component.css']
+  selector: 'app-ttusau',
+  templateUrl: './ttusau.component.html',
+  styleUrls: ['./ttusau.component.css']
 })
-export class TutsauComponent implements OnInit {
+export class TtusauComponent implements OnInit {
   data: any[] = [];
   loadData(pi: number): void {
     this.data = new Array(5).fill({}).map((_, index) => {

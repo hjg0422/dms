@@ -22,7 +22,7 @@ export default {
         breadcrumb: '首页'
       }
     },
-    { name: '吐槽', path: 'tutsau', icon: 'project' },
+    { name: '吐槽', path: 'home/tutsau', icon: 'project' },
     {
       name: '功能', icon: 'project', children: [
         {
@@ -69,5 +69,4 @@ export default {
     { name: '系统管理', path: 'home', icon: 'project' },
     { name: '日志管理', path: 'home', icon: 'project' }
   ]
-
 }

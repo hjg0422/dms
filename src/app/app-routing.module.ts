@@ -9,6 +9,7 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { NotfoundComponent } from './components/pages/notfound/notfound.component';
 import { InformationListComponent } from './components/pages/home/information-list/information-list.component';
 import { TutsauComponent } from './components/home/tutsau/tutsau.component';
+import { TtusauComponent } from './components/pages/home/ttusau/ttusau.component';
 /*
 *根路由配置(cli——ng g m app-routing --m app --flat)
 */
@@ -27,7 +28,7 @@ const routes: Routes = [
   },
   { path: 'my-profile', component: MyProfileComponent },
   { path: 'edit-my-profile', component: EditMyProfileComponent },
-  { path: 'tutsau', component: TutsauComponent },
+  { path: 'home/tutsau', component: TtusauComponent },
   { path: '**', component: NotfoundComponent },
 ]
 @NgModule({
